@@ -18,12 +18,12 @@ export default function InputText(props) {
             font-family: inherit;
             width: 100%;
             border: 0;
-            border-bottom: 1px solid #d2d2d2;
+            border-bottom: 1px solid #a5a5a5;
             outline: 0;
             font-size: 16px;
-            color: #212121;
+            color: #595959;
             padding: 7px 0;
-            background: transparent;
+            
             transition: border-color 0.2s;
           }
           
@@ -44,25 +44,29 @@ export default function InputText(props) {
             display: block;
             transition: 0.2s;
             font-size: 12px;
-            color: #9b9b9b;
+            color: #595959;
           }
           
           .form__field:focus ~ .form__label {
-            color: #009788;
+            color: #2b2d48;
           }
           
           .form__field:focus {
             padding-bottom: 6px;
-            border-bottom: 2px solid #009788;
+            border-bottom: 1px solid #2b2d48;
+            background: #f2f2f2;
           }
+
         `}
       </style>
-      <label className="form__label mb-10" htmlFor={props.name}>{props.label}: </label>
       <input
         className="form__field"
         type="text"
+        placeholder={props.label}
         name={props.name}
+        id={props.name}
       />
+      <label className="form__label" htmlFor={props.name}>{props.label}: </label>
     </div>
   );
 }
