@@ -1,11 +1,23 @@
 "use client";
+import { useRef } from "react";
 
 export default function InputText(props) {
   /**
    * ? TODO: change the styling of this component to match the design on figma
    */
+
+  const formGroupRef = useRef();
+
+  const onInputFocus = () => {
+    formGroupRef.current.classList.add("background_grey");
+  }
+
+  const onInputBlur = () => {
+    formGroupRef.current.classList.remove("background_grey");
+  }
+
   return (
-    <div className="form__group">
+    <div ref={formGroupRef} className="form__group">
       <style>
         {`
           .form__group {
@@ -57,11 +69,17 @@ export default function InputText(props) {
             background: #f2f2f2;
           }
 
+          .background_grey{
+            background: #f2f2f2;
+          }
         `}
       </style>
       <input
+        
         className="form__field"
         type="text"
+        onFocus={onInputFocus}
+        onBlur={onInputBlur}
         placeholder={props.label}
         name={props.name}
         id={props.name}
