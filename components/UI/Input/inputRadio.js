@@ -1,11 +1,10 @@
 "use client";
 
 export default function InputRadio(props) {
-    
-    return(
-        <div>
-            <style>
-                {`
+  return (
+    <div>
+      <style>
+        {`
                     .radio_btn {
                         appearance: none;
                         -webkit-appearance: none;
@@ -27,8 +26,8 @@ export default function InputRadio(props) {
                         border: 1px solid rgba(0.647, 0.647, 0.647, 0.15);
                       }
                 `}
-            </style>
-            <input name={props.name} className="radio_btn" type="radio"/>
-        </div>
-    );
+      </style>
+      <input name={props.name} className="radio_btn" type="radio" />
+    </div>
+  );
 }
