@@ -1,5 +1,7 @@
 import InputText from "./InputText";
+import InputRadio from "./inputRadio";
 
 export {
-    InputText
+    InputText,
+    InputRadio
 }

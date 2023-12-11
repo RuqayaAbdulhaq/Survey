@@ -2,19 +2,15 @@
 import { useRef } from "react";
 
 export default function InputText(props) {
-  /**
-   * ? TODO: change the styling of this component to match the design on figma
-   */
-
   const formGroupRef = useRef();
 
   const onInputFocus = () => {
     formGroupRef.current.classList.add("background_grey");
-  }
+  };
 
   const onInputBlur = () => {
     formGroupRef.current.classList.remove("background_grey");
-  }
+  };
 
   return (
     <div ref={formGroupRef} className="form__group">
@@ -75,7 +71,6 @@ export default function InputText(props) {
         `}
       </style>
       <input
-        
         className="form__field"
         type="text"
         onFocus={onInputFocus}
@@ -84,7 +79,9 @@ export default function InputText(props) {
         name={props.name}
         id={props.name}
       />
-      <label className="form__label" htmlFor={props.name}>{props.label}: </label>
+      <label className="form__label" htmlFor={props.name}>
+        {props.label}:{" "}
+      </label>
     </div>
   );
 }

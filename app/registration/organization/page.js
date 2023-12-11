@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { InputText } from "../../../components/UI/Input";
+import { InputText, InputRadio } from "../../../components/UI/Input";
 import FormContainer from "../../../components/UI/containers/formContainer";
 
 export default function RegisterAsPage(props) {
@@ -19,6 +19,8 @@ export default function RegisterAsPage(props) {
           <InputText label={"Email"} name={"EMAIL"} />
           <InputText label={"Mobile"} name={"MOBILE"} />
           <InputText label={"Address"} name={"ADDRESS"} />
+          <InputRadio />
+          <hr></hr>
         </FormContainer>
       </div>
       <Link href={"/registration/indivisual"}>Register As Indivisual</Link>
